@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>präsentation</title>
+    <style>
+      p {
+        font-family: sans-serif;;
+        }
+      h1 {
+        color:burlywood
+      }
+      h2 {
+        color: rgb(180, 155, 116);
+      }
+      h3 {
+        color:rgb(156, 128, 92)
+      }
+    </style>
+    
+
+</head>
+<body>
+    <h1>Präsentation über die Aufgaben:</h1>
+
+    <h2>Aufgabe 1: </h2>
+    <p>- Ich habe erfolgreich einen Windowsserver mit <i>Windows Server 2025 Standard <b>mit GUI</b></i> erstellt und eine Domäne mit dem Namen <i>leers.local</i> hinzugefügt.</p>
+    <p>- Ich habe außerdem die Systemsprache auf <b>Englisch</b> geändert.</p>
+    <p>- Ich habe den Server auf den Namen <i>ServerDC10</i> umbenannt.</p>
+
+    <h3>Bootpartition:</h3>
+    <p>- Ich habe bei der Erstellung des Domänencontrollers darauf geachtet, dass ich die Vorschriften: [Insg. Speicher: 60 GB, 2 CPUs & 8 GB Ram] beachte.</p>
+
+    <h2>Aufgabe 2:</h2>
+    <p>- Ich habe einen Windows 10 Enterprise Workstation Client als Mitglied der Domäne <i>leers.local</i> hinzugefügt und den Client zu <i>Member10</i> umbenannt.</p>
+    <p>- Ich habe darauf geachtet, dass die Systemsprache auf <i>Englisch</i> eingestellt ist.</p>
+
+    <h3>Bootpartition:</h3>
+    <p>- Ich habe mich an die Vorschriften [40 GB, 1 CPU & 8 GB Ram] gehalten.</p>
+
+    <h2>Aufgabe 3:</h2>
+    <p>- Ich habe die Firewall für alle Systeme [Member10, ServerDC10] abgeschaltet.</p>
+    <p><b>Bild von Firewall-Settings - ServerDC10:</b></p>
+    <img src="photos/serverdc10_firewall.png" alt="Bild von Firewall auf ServerDC10" height="400" width="300">
+    <p><b>Bild von Firewall-Settings - Member10:</b></p>
+    <img src="photos/member10_firewall.png" alt="Bild von Firewall auf ServerDC10" height="280" width="300">
+    
+    <h2>Erstellung einer Datenpartition:</h2>
+    <p>- Ich habe eine zusätzliche Datenpartition mit einer Größe von <i>10 GB</i>. Der Kürzel der Partition lautet <i><b>E</b></i></p>
+    <p><b>Bild von Partitionen (Volumes) - ServerDC10:</b></p>
+    <img src="photos/add_dateipartition_serverdc10.png" alt="Bild von zusätzliche Datenpartition" height="200" width="300">
+</body>
+</html>
