@@ -17,6 +17,9 @@
       h3 {
         color:rgb(156, 128, 92)
       }
+      h4 {
+        color: brown;
+      }
     </style>
     
 
@@ -24,7 +27,7 @@
 <body>
     <h1>Präsentation über die Aufgaben:</h1>
 
-    <h2>Aufgabe 1: </h2>
+    <h2>Aufgabe 1: Domänencontroller einrichten</h2>
     <p>- Ich habe erfolgreich einen Windowsserver mit <i>Windows Server 2025 Standard <b>mit GUI</b></i> erstellt und eine Domäne mit dem Namen <i>leers.local</i> hinzugefügt.</p>
     <p>- Ich habe außerdem die Systemsprache auf <b>Englisch</b> geändert.</p>
     <p>- Ich habe den Server auf den Namen <i>ServerDC10</i> umbenannt.</p>
@@ -32,23 +35,62 @@
     <h3>Bootpartition:</h3>
     <p>- Ich habe bei der Erstellung des Domänencontrollers darauf geachtet, dass ich die Vorschriften: [Insg. Speicher: 60 GB, 2 CPUs & 8 GB Ram] beachte.</p>
 
-    <h2>Aufgabe 2:</h2>
+    <h2>Aufgabe 2: Rechner <i>Member10</i> erstellen und konfigurieren</h2>
     <p>- Ich habe einen Windows 10 Enterprise Workstation Client als Mitglied der Domäne <i>leers.local</i> hinzugefügt und den Client zu <i>Member10</i> umbenannt.</p>
     <p>- Ich habe darauf geachtet, dass die Systemsprache auf <i>Englisch</i> eingestellt ist.</p>
 
     <h3>Bootpartition:</h3>
     <p>- Ich habe mich an die Vorschriften [40 GB, 1 CPU & 8 GB Ram] gehalten.</p>
 
-    <h2>Aufgabe 3:</h2>
+    <h2>Aufgabe 3: Firewall deaktivieren</h2>
     <p>- Ich habe die Firewall für alle Systeme [Member10, ServerDC10] abgeschaltet.</p>
     <p><b>Bild von Firewall-Settings - ServerDC10:</b></p>
     <img src="photos/serverdc10_firewall.png" alt="Bild von Firewall auf ServerDC10" height="400" width="300">
     <p><b>Bild von Firewall-Settings - Member10:</b></p>
     <img src="photos/member10_firewall.png" alt="Bild von Firewall auf ServerDC10" height="280" width="300">
     
-    <h2>Erstellung einer Datenpartition:</h2>
+    <h2>Aufgabe 4: Erstellung einer Datenpartition</h2>
     <p>- Ich habe eine zusätzliche Datenpartition mit einer Größe von <i>10 GB</i>. Der Kürzel der Partition lautet <i><b>E</b></i></p>
     <p><b>Bild von Partitionen (Volumes) - ServerDC10:</b></p>
     <img src="photos/add_dateipartition_serverdc10.png" alt="Bild von zusätzliche Datenpartition" height="200" width="300">
-</body>
+
+    <h2>Aufgabe 5: Ordner <i>Daten</i> erstellen und Benutzerrechte hinzufügen</h2>
+    <p>- Ich habe in der Partition einen neuen Ordner namnes <i>Daten</i> hinzugefügt.</p>
+    <p>- Danach habe ich im Active Directoryy den Benutzer <i>User1</i> hinzugefügt</p>
+    <p>- Anschließend habe ich den Ordner <i>Daten</i> auf <i>Member10</i> als Netzwerklaufwerk <i><b>X</b></i> verknüpft.</p>
+    <p>- Test: ich habe über das Laufwerk <i>X</i> eine Datei mit Testinhalt erstellt und sie wurde erfolgreich syncronisiert.</p>
+    <img src="photos/freigabe_serverdc10.png" alt="Bild von der Syncronisierung der Test-File" height="200" width="300">
+    <p>- Hier ein Bild von User01</p>
+    <img src="photos/domänen_user01_serverdc10.png" alt="Bild vom Domänenbenutzers User01" height="200" width="300">
+    <p>Außerdem habe ich <i>Daten</i> als Laufwerk <i><b>X</b></i> auf Member10 verbunden.</p>
+    <img src="photos/laufwerk_x_member10_testfile.png" alt="Laufwerk X auf Member10 verbunden" height="40" width="620">
+
+    <h2>Aufgabe 6: theoretische Fragen</h2>
+    <h4>Was ist eine Microsoft Domäne?</h3>
+    <p>- Eine Domäne ist eine Netzwerk, womit man verschiedene Sachen verwalten kann:</p>
+    <p>Darunter sind: Benutzer, Computer, Berechtigungen, Gruppenrichtlinien.</p>
+    <h4>Was ist ein Domänencontroller</h3>
+    <p>Ein Domänencontroller ist ein Server, der eine Domäne verwaltet, welche, wie schon gesagt die Benutzer, Computer, usw. steuert.</p>
+    <h4>Was ist eine Partition?</h3>
+    <p>Eine Partition ist ein abgetrennter Teil im Speicher / virtuellem Speicher.</p>
+    <p>Diese werden auf Windows mit verschiedenen Kürzeln abegekürzt.</p>
+    <p>Es gibt denoch einen Unterschied zwischen Partition und Datenpartition:</p>
+    <p>Datenpartitionen werden speziell zum speichern von Daten verwendet.</p>
+    <p>Ich habe in den Aufgaben die Datenpartition: <i>Daten</i> erstellt.</p>
+    <h4>Was ist eine Netzwerkfreigabe?</h3>
+    <p>Eine Netzwerkfreigabe ist eine Freige, womit andere Clients im gleichen Netzwerk (und wenn sie freigegeben ist für den Client) auf einen bestimmten Speicher zugreifen können.</p>
+    <h4>Was sind NTFS-Permissions?</h4>
+    <p>Diese Berechtigungen bestimmen, was der Benutzer mit Datein und/oder Ordnern machen darf.</p>
+    <h4>Was ist DNS?</h4>
+    <p>DNS (domain name system) übersetzt Namen in IP-Adressen.</p>
+    <h4>Was ist der Vorteil einer Domäne?</h4>
+    <p>Die Vorteile sind:</p>
+    <p>zentrale Benutzerverwaltung</p>
+    <p>zentrale Berechtigungen</p>
+    <p>bessere Verwaltung</p>
+    <h4>Was ist eine Gruppenrichtlinie</h4>
+    <p>Eine Gruppenrichtlinie (abgekürzt gpo) ist dazu in der Lage, Einstellungen zentral zu verwalten.</p>
+    <p>Unter anderem Firewall Einstellungen, Sicherheits Einstellungen, usw.</p>
+
+  </body>
 </html>
